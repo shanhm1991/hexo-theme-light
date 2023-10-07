@@ -1,32 +1,35 @@
 #sidebar
-  width 270px
+  width 280px
   line-height 1.8em
+
+  left: calc(50% + 315px);
   @media screen and (max-width: 900px)
     float none
     width 100%
   .widget
     background #fff
     box-shadow 1px 2px 3px #ddd
-    margin-bottom 30px
+    margin-bottom 20px
     word-wrap break-word
     .title
-      padding 15px 20px
+      padding 15px 15px
+      margin-top 0px
       font-size 1em
       border-bottom 1px solid color-border
       font-weight normal
 
     .entry
       font-size 0.9em
-      padding 15px 20px
+      padding 15px 15px
 
     ul, ol, dl
       list-style none
       ul, ol, dl
         list-style disc
-        margin-left 20px
+        margin-left 10px
 
   .search
-    margin-bottom 30px
+    margin-bottom 20px
     input
       background #fff
       font-family font-title
@@ -64,7 +67,39 @@
 
   .tagcloud
     .entry
-      padding-right 5px
+      padding-right 3px
     a
-      margin-right 10px
+      margin-right 5px
+	  min 10px
+	  font-size 10px
+	  font-max 10px
       display inline-block
+
+  .catlog
+    position fixed
+    width 280px
+	.entry_catlog
+      font-size 0.9em
+      padding 2px 5px
+	  
+   .archive-list
+    font-size 0.9em
+    padding 15px 20px 
+    .archive-list-count
+        margin-left 8px
+        font-size 0.8em
+        color color-meta
+        &:before
+            content '('
+        &:after
+            content ')'
+  .toc
+    padding 0
+    margin 0.2em
+    line-height 1.5em
+    li
+     list-style-type none
+  .toc-child 
+    margin-left 0.8em
+
+	  

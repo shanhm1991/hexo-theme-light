@@ -10,6 +10,7 @@
       <% } %>
       <%- partial('post/title') %>
     </header>
+      
     <div class="e-content entry" itemprop="articleBody">
       <% if (item.excerpt && index){ %>
         <%- item.excerpt %>
@@ -17,6 +18,7 @@
         <%- item.content %>
       <% } %>
     </div>
+	
     <footer>
       <% if (index){ %>
         <% if (item.excerpt){ %>
@@ -30,9 +32,27 @@
         </div>
         <% } %>
       <% } else { %>
+	  
+	    <% if (is_post()){ %>
+	<nav id="pagination">
+	  <% if(item.prev){ %>
+		  <a class="alignleft prev" href="<%- url_for(item.prev.path) %>">
+		    <%= item.prev.title %>
+		  </a>
+	  <% } %>
+	  
+	  <% if(item.next){ %>
+		  <a class="alignright next" href="<%- url_for(item.next.path) %>">
+		    <%= item.next.title %>
+		  </a>
+	  <% } %>
+	  <div class="clearfix"></div>
+	</nav>
+	<% } %>
+	    
         <%- partial('post/category') %>
         <%- partial('post/tag') %>
-        <%- partial('post/share') %>
+        <%- partial('post/share') %> 		        
       <% } %>
       <div class="clearfix"></div>
     </footer>

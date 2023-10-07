@@ -1,15 +1,40 @@
-<% if (page.comments){ %>
-<section id="comment">
-  <h1 class="title"><%= __('comment') %></h1>
+<% if (is_post() && theme.rating.enable){ %>
+<div id="wpac-rating"></div>
+<script type="text/javascript">
+wpac_init = window.wpac_init || [];
+wpac_init.push({widget: 'Rating', id: 22492});
+(function() {
+    if ('WIDGETPACK_LOADED' in window) return;
+    WIDGETPACK_LOADED = true;
+    var mc = document.createElement('script');
+    mc.type = 'text/javascript';
+    mc.async = true;
+    mc.src = 'https://embed.widgetpack.com/widget.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+})();
+</script>
+<% } %>
 
-  <% if (theme.comment_provider == "facebook") {
-      if (theme.facebook) { %>
-      <%- partial('_partial/facebook_comment', {fbConfig: theme.facebook}) %>
-      <% } %>
-  <% } else if(config.disqus_shortname) { %>
-  <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </div>
-  <% } %>
-</section>
+<% if (page.comments){ %>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+<script src="<%- config.root %>js/md5.min.js"></script>
+<div id="gitalk-container"></div>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '<%= theme.gitalk.clientID %>',
+        clientSecret: '<%= theme.gitalk.clientSecret %>',
+        id: md5(window.location.pathname),
+        repo: '<%= theme.gitalk.repo %>',
+        owner: '<%= theme.gitalk.owner %>',
+        admin: '<%= theme.gitalk.admin %>'
+    })
+    gitalk.render('gitalk-container')
+</script>                              
+<% } %>
+
+<% if (site.disqus_username){ %>
+<div class="comment">
+    <div id="disqus_thread" class="disqus-thread"></div>
+</div>
 <% } %>

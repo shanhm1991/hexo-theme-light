@@ -1,17 +1,17 @@
 .entry
   .gist
-    background #eee
+    background #F0F0F0
     border 1px solid color-border
     margin-top 15px
     padding 7px 15px
     border-radius 2px
     text-shadow 0 0 1px #fff
-    line-height 1.6
+    line-height 1.4
     overflow auto
     color #666
     .gist-file
       border none
-      font-family inherit
+      font-family Microsoft-YaHei
       margin 0
       font-size 0.9em
       .gist-data
@@ -33,49 +33,60 @@
             color color-link
 
 figure.highlight
-  background #eee
-  border 1px solid color-border
-  margin-top 15px
-  padding 7px 15px
+  background #F6F6F6
+  margin-top 10px
+  padding 0px
   border-radius 2px
   text-shadow 0 0 1px #fff
-  line-height 1.6
+  line-height 1.4
   overflow auto
   position relative
   font-size 0.9em
   figcaption
     color color-meta
-    margin-bottom 5px
+    margin-bottom 4px
     text-shadow 0 0 1px #fff
     a
       position absolute
       right 15px
 
   pre
+    overflow-y hidden
+	overflow-x auto
     border none
-    padding 0
-    margin 0
-
+    padding 0px
+ 
   table
     margin-top 0
     border-spacing 0
 
   .gutter
+    width 30px
     color color-meta
-    padding-right 15px
+    padding-right 5px
     border-right 1px solid color-border
     text-align right
-
+	
   .code
-    padding-left 15px
+    width 768px
+    padding-left 5px
     border-left 1px solid #fff
-    color #666
+    color #333333
+	
+  .nine
+    display: inline-block
 
   .line
-    height: 20px
+    display: inline-block
+	
+  .marked
+    width 100%
+    background: #E6E6E6
 
-  .line.marked
-    background: #d6d6d6
+figcaption
+  padding-left 8px
+  padding-top 2px
+  border-bottom: 1px solid color-border
 
 pre
   // Theme: Solarized - Light
@@ -87,8 +98,8 @@ pre
   .pi
   .lisp .string
   .javadoc
-    color #93a1a1
-    font-style italic
+    color #8686A5
+    font-style Roboto-Regular
 
   .keyword
   .winutils
@@ -98,7 +109,7 @@ pre
   .request
   .status
   .nginx .title
-    color #859900
+    color #a41acf
 
   .number
   .command
@@ -108,7 +119,7 @@ pre
   .tex .formula
   .regexp
   .hexcolor
-    color #2aa198
+    color #228B22
 
   .title
   .localvars
@@ -119,7 +130,7 @@ pre
   .vhdl
   .literal
   .id
-    color #268bd2
+    color #d18613
 
   .attribute
   .variable
@@ -129,7 +140,7 @@ pre
   .class .title
   .parent
   .haskell .type
-    color #b58900
+    color #e13406 
 
   .preprocessor
   .preprocessor .keyword

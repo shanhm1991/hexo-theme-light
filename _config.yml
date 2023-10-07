@@ -1,13 +1,22 @@
 menu:
-  Home:
-  Archives: archives
+  Home: 
+  Abount: about
+  Books: books 
 
 widgets:
 - search
 - category
-- tag
+- tagcloud
+- catlog
 
-excerpt_link: Read More
+excerpt_link: more
+
+categort_weight:
+
+
+mathjax:
+    enable: true
+    per_page: true
 
 twitter:
   username:
@@ -15,22 +24,38 @@ twitter:
   tweet_count: 5
 
 addthis:
-  enable: true
-  pubid:
-  facebook: true
+  enable: false
+  pubid: false
+  facebook: false
   twitter: true
-  google: true
-  pinterest: true
+  google: false
+  pinterest: false
 
 fancybox: true
 
-google_analytics:
-rss:
+rating:
+  enable: false
+  id: 22492    
+  color: f79533
 
-comment_provider: facebook
+gitalk:
+  enable: true    #是否开启Gitalk评论
+  clientID: d7beb7890a79c73a3e3d                            #生成的clientID
+  clientSecret: 80ea1fc195ae4b80cbd65ec9f1ce68d59595af4b    #生成的clientSecret
+  repo: shanhm1991.github.io    #仓库名称
+  owner: shanhm1991    #github用户名
+  admin: shanhm1991
+  distractionFreeMode: true #是否启用类似FB的阴影遮罩
+
+google_analytics: UA-147251181-1
+
+#rss:
+
+#comment_provider: facebook
+
 # Facebook comment
-facebook:
-  appid: 123456789012345
-  comment_count: 5
-  comment_width: 840
-  comment_colorscheme: light
+#facebook:
+#  appid: 123456789012345
+#  comment_count: 5
+#  comment_width: 840
+#  comment_colorscheme: light
