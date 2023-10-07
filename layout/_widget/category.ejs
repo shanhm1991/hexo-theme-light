@@ -3,122 +3,87 @@
   <h3 class="title"><%= __('categories') %></h3>
   <ul class="entry">
   
-  <li id="java_ul"><a href="#">Java</a><small>44</small></li>
-  <ul id="java_li" class="entry_li" style="        list-style: none; padding-left: 5px;">
-  
-  <% site.categories.sort('path').each(function(item){ %>
-  <% if (item.name == "Java SE"){ %>
-    <li><a href="<%- config.root %><%- item.path %>"><%= item.name %></a><small><%= item.posts.length %></small></li>
-  <% } %>
-  <% }); %>
-  
-  <% site.categories.sort('path').each(function(item){ %>
-  <% if (item.name == "Java SDK"){ %>
-    <li><a href="<%- config.root %><%- item.path %>"><%= item.name %></a><small><%= item.posts.length %></small></li>
-  <% } %>
-  <% }); %>
-  
-  <% site.categories.sort('path').each(function(item){ %>
-  <% if (item.name == "Java 并发"){ %>
-    <li><a href="<%- config.root %><%- item.path %>"><%= item.name %></a><small><%= item.posts.length %></small></li>
-  <% } %>
-  <% }); %>
-  
-  <% site.categories.sort('path').each(function(item){ %>
-  <% if (item.name == "Java VM"){ %>
-    <li><a href="<%- config.root %><%- item.path %>"><%= item.name %></a><small><%= item.posts.length %></small></li>
-  <% } %>
-  <% }); %>
-  
-  </ul>
-  
-  
-  
-  
-  <li id="frame_ul"><a href="#">Java 开源</a><small>19</small></li>
-  <ul id="frame_li" class="entry_li" style="        list-style: none; padding-left: 0px 0px 0px 5px;">
-  
-  <% site.categories.sort('path').each(function(item){ %>
-  <% if (item.name == "Spring"){ %>
-    <li><a href="<%- config.root %><%- item.path %>"><%= item.name %></a><small><%= item.posts.length %></small></li>
-  <% } %>
-  <% }); %>
-  
-  <% site.categories.sort('path').each(function(item){ %>
-  <% if (item.name == "Tomcat"){ %>
-    <li><a href="<%- config.root %><%- item.path %>"><%= item.name %></a><small><%= item.posts.length %></small></li>
-  <% } %>
-  <% }); %>
-  
-  <% site.categories.sort('path').each(function(item){ %>
-  <% if (item.name == "Netty"){ %>
-    <li><a href="<%- config.root %><%- item.path %>"><%= item.name %></a><small><%= item.posts.length %></small></li>
-  <% } %>
-  <% }); %>
-  
-  </ul>
-  
-  
-  
-  
-  <li id="os_ul"><a href="#">操作系统</a><small>9</small></li>
-  <ul id="os_li" class="entry_li" style="        list-style: none; padding-left: 5px;">
-  
-  <% site.categories.sort('path').each(function(item){ %>
-  <% if (item.name == "计算机组成"){ %>
-    <li><a href="<%- config.root %><%- item.path %>"><%= item.name %></a><small><%= item.posts.length %></small></li>
-  <% } %>
-  <% }); %>
-  
-  <% site.categories.sort('path').each(function(item){ %>
-  <% if (item.name == "Unix"){ %>
-    <li><a href="<%- config.root %><%- item.path %>"><%= item.name %></a><small><%= item.posts.length %></small></li>
-  <% } %>
-  <% }); %>
-  
-  <% site.categories.sort('path').each(function(item){ %>
-  <% if (item.name == "Linux"){ %>
-    <li><a href="<%- config.root %><%- item.path %>"><%= item.name %></a><small><%= item.posts.length %></small></li>
-  <% } %>
-  <% }); %>
-  
-  <% site.categories.sort('path').each(function(item){ %>
-  <% if (item.name == "Mac"){ %>
-    <li><a href="<%- config.root %><%- item.path %>"><%= item.name %></a><small><%= item.posts.length %></small></li>
-  <% } %>
-  <% }); %>
-  
-  <% site.categories.sort('path').each(function(item){ %>
-  <% if (item.name == "Windows"){ %>
-    <li><a href="<%- config.root %><%- item.path %>"><%= item.name %></a><small><%= item.posts.length %></small></li>
-  <% } %>
-  <% }); %>
+  <li id="java_ul"><a href="#">Java</a><small>64</small></li>
+  <ul id="java_li" style="list-style: none; padding-left: 5px;">
+      <% site.categories.sort('path').each(function(item){ %>
+      <% if (item.name == "Java SE"){ %>
+      <li><a href="<%- config.root %><%- item.path %>"><%= item.name %></a><small><%= item.posts.length %></small></li>
+      <% } %>
+      <% }); %>
 
+      <% site.categories.sort('path').each(function(item){ %>
+      <% if (item.name == "Java VM"){ %>
+      <li><a href="<%- config.root %><%- item.path %>"><%= item.name %></a><small><%= item.posts.length %></small></li>
+      <% } %>
+      <% }); %>  
+
+      <% site.categories.sort('path').each(function(item){ %>
+      <% if (item.name == "Java 并发"){ %>
+      <li><a href="<%- config.root %><%- item.path %>"><%= item.name %></a><small><%= item.posts.length %></small></li>
+      <% } %>
+      <% }); %>
+
+      <% site.categories.sort('path').each(function(item){ %>
+      <% if (item.name == "Spring"){ %>
+      <li><a href="<%- config.root %><%- item.path %>"><%= item.name %></a><small><%= item.posts.length %></small></li>
+      <% } %>
+      <% }); %>  
+
+      <% site.categories.sort('path').each(function(item){ %>
+      <% if (item.name == "Tomcat"){ %>
+      <li><a href="<%- config.root %><%- item.path %>"><%= item.name %></a><small><%= item.posts.length %></small></li>
+      <% } %>
+      <% }); %>
+
+      <% site.categories.sort('path').each(function(item){ %>
+      <% if (item.name == "Netty"){ %>
+      <li><a href="<%- config.root %><%- item.path %>"><%= item.name %></a><small><%= item.posts.length %></small></li>
+      <% } %>
+      <% }); %>
   </ul>
-  
-  
-  
-  
+
   <li id="db_ul"><a href="#">数据库</a><small>2</small></li>
-  <ul id="db_li" class="entry_li" style="        list-style: none; padding-left: 5px;">
+  <ul id="db_li" class="entry_li" style="list-style: none; padding-left: 5px;">
+      <% site.categories.sort('path').each(function(item){ %>
+      <% if (item.name == "postgre"){ %>
+      <li><a href="<%- config.root %><%- item.path %>"><%= item.name %></a><small><%= item.posts.length %></small></li>
+      <% } %>
+      <% }); %>
   
-  <% site.categories.sort('path').each(function(item){ %>
-  <% if (item.name == "postgre"){ %>
-    <li><a href="<%- config.root %><%- item.path %>"><%= item.name %></a><small><%= item.posts.length %></small></li>
-  <% } %>
-  <% }); %>
-  
-  <% site.categories.sort('path').each(function(item){ %>
-  <% if (item.name == "Redis"){ %>
-    <li><a href="<%- config.root %><%- item.path %>"><%= item.name %></a><small><%= item.posts.length %></small></li>
-  <% } %>
-  <% }); %>
-  
+      <% site.categories.sort('path').each(function(item){ %>
+      <% if (item.name == "Redis"){ %>
+      <li><a href="<%- config.root %><%- item.path %>"><%= item.name %></a><small><%= item.posts.length %></small></li>
+      <% } %>
+      <% }); %>
   </ul>
 
+  <li id="os_ul"><a href="#">计算机基础</a><small>6</small></li>
+  <ul id="os_li" class="entry_li" style="list-style: none; padding-left: 5px;">
+      <% site.categories.sort('path').each(function(item){ %>
+      <% if (item.name == "计算机组成"){ %>
+      <li><a href="<%- config.root %><%- item.path %>"><%= item.name %></a><small><%= item.posts.length %></small></li>
+      <% } %>
+      <% }); %>
   
+      <% site.categories.sort('path').each(function(item){ %>
+      <% if (item.name == "Unix"){ %>
+      <li><a href="<%- config.root %><%- item.path %>"><%= item.name %></a><small><%= item.posts.length %></small></li>
+      <% } %>
+      <% }); %>
   
+      <% site.categories.sort('path').each(function(item){ %>
+      <% if (item.name == "Linux"){ %>
+      <li><a href="<%- config.root %><%- item.path %>"><%= item.name %></a><small><%= item.posts.length %></small></li>
+      <% } %>
+      <% }); %>
   
+      <% site.categories.sort('path').each(function(item){ %>
+      <% if (item.name == "Linux命令"){ %>
+      <li><a href="<%- config.root %><%- item.path %>"><%= item.name %></a><small><%= item.posts.length %></small></li>
+      <% } %>
+      <% }); %>
+  </ul>
+
   <% site.categories.sort('path').each(function(item){ %>
   <% if (item.name == "算法设计"){ %>
     <li><a href="<%- config.root %><%- item.path %>"><%= item.name %></a><small><%= item.posts.length %></small></li>
@@ -136,21 +101,21 @@
     <li><a href="<%- config.root %><%- item.path %>"><%= item.name %></a><small><%= item.posts.length %></small></li>
   <% } %>
   <% }); %>
-  
+
   <% site.categories.sort('path').each(function(item){ %>
-  <% if (item.name == "开发环境"){ %>
+  <% if (item.name == "环境运维"){ %>
     <li><a href="<%- config.root %><%- item.path %>"><%= item.name %></a><small><%= item.posts.length %></small></li>
   <% } %>
   <% }); %>
-  
+
   <% site.categories.sort('path').each(function(item){ %>
-  <% if (item.name == "开发工具"){ %>
+  <% if (item.name == "开发日常"){ %>
     <li><a href="<%- config.root %><%- item.path %>"><%= item.name %></a><small><%= item.posts.length %></small></li>
   <% } %>
   <% }); %>
- 
+   
   <% site.categories.sort('path').each(function(item){ %>
-  <% if (item.name == "开发随笔"){ %>
+  <% if (item.name == "开发笔记"){ %>
     <li><a href="<%- config.root %><%- item.path %>"><%= item.name %></a><small><%= item.posts.length %></small></li>
   <% } %>
   <% }); %>
@@ -162,11 +127,8 @@
 <script src="<%- config.root %>js/jquery-3.4.1.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-
-$("#java_ul").click(function(){ $("#java_li").toggle(); });
-$("#frame_ul").click(function(){ $("#frame_li").toggle(); });
-$("#os_ul").click(function(){ $("#os_li").toggle(); });
-$("#db_ul").click(function(){ $("#db_li").toggle(); });
-		
+    $("#java_ul").click(function(){ $("#java_li").toggle(); });
+    $("#os_ul").click(function(){ $("#os_li").toggle(); });
+    $("#db_ul").click(function(){ $("#db_li").toggle(); });		
 });
 </script>
