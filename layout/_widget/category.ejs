@@ -34,19 +34,7 @@
   <% }); %>
 
   <% site.categories.sort('path').each(function(item){ %>
-  <% if (item.name == "杂记随笔"){ %>
-    <li><a href="<%- config.root %><%- item.path %>" style="width:50px; display:inline-block;"><%= item.name %></a><small><%= item.posts.length %></small></li>
-  <% } %>
-  <% }); %>
-
-  <% site.categories.sort('path').each(function(item){ %>
   <% if (item.name == "日常随笔"){ %>
-    <li><a href="<%- config.root %><%- item.path %>" style="width:50px; display:inline-block;"><%= item.name %></a><small><%= item.posts.length %></small></li>
-  <% } %>
-  <% }); %>
-
-  <% site.categories.sort('path').each(function(item){ %>
-  <% if (item.name == "编程随笔"){ %>
     <li><a href="<%- config.root %><%- item.path %>" style="width:50px; display:inline-block;"><%= item.name %></a><small><%= item.posts.length %></small></li>
   <% } %>
   <% }); %>
