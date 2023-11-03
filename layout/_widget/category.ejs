@@ -4,54 +4,36 @@
   <ul class="entry">
 
   <% site.categories.sort('path').each(function(item){ %>
-  <% if (item.name == "Linux"){ %>
-  <li><a href="<%- config.root %><%- item.path %>" style="width:50px; display:inline-block;"><%= item.name %></a><small><%= item.posts.length %></small></li>
-  <% } %>
-  <% }); %>
-
-  <% site.categories.sort('path').each(function(item){ %>
   <% if (item.name == "Java SE"){ %>
-  <li><a href="<%- config.root %><%- item.path %>" style="width:50px; display:inline-block;"><%= item.name %></a><small><%= item.posts.length %></small></li>
+  <li><a href="<%- config.root %><%- item.path %>" style="width:45px; display:inline-block;"><%= item.name %></a><small><%= item.posts.length %></small></li>
   <% } %>
   <% }); %>
 
   <% site.categories.sort('path').each(function(item){ %>
   <% if (item.name == "算法设计"){ %>
-    <li><a href="<%- config.root %><%- item.path %>" style="width:50px; display:inline-block;"><%= item.name %></a><small><%= item.posts.length %></small></li>
-  <% } %>
-  <% }); %>
-  
-  <% site.categories.sort('path').each(function(item){ %>
-  <% if (item.name == "数据结构"){ %>
-    <li><a href="<%- config.root %><%- item.path %>" style="width:50px; display:inline-block;"><%= item.name %></a><small><%= item.posts.length %></small></li>
+    <li><a href="<%- config.root %><%- item.path %>" style="width:45px; display:inline-block;"><%= item.name %></a><small><%= item.posts.length %></small></li>
   <% } %>
   <% }); %>
   
   <% site.categories.sort('path').each(function(item){ %>
   <% if (item.name == "设计模式"){ %>
-    <li><a href="<%- config.root %><%- item.path %>" style="width:50px; display:inline-block;"><%= item.name %></a><small><%= item.posts.length %></small></li>
+    <li><a href="<%- config.root %><%- item.path %>" style="width:45px; display:inline-block;"><%= item.name %></a><small><%= item.posts.length %></small></li>
   <% } %>
   <% }); %>
 
   <% site.categories.sort('path').each(function(item){ %>
   <% if (item.name == "日常随笔"){ %>
-    <li><a href="<%- config.root %><%- item.path %>" style="width:50px; display:inline-block;"><%= item.name %></a><small><%= item.posts.length %></small></li>
+    <li><a href="<%- config.root %><%- item.path %>" style="width:45px; display:inline-block;"><%= item.name %></a><small><%= item.posts.length %></small></li>
   <% } %>
   <% }); %>
 
   <% site.categories.sort('path').each(function(item){ %>
   <% if (item.name == "开发笔记"){ %>
-    <li><a href="<%- config.root %><%- item.path %>" style="width:50px; display:inline-block;"><%= item.name %></a><small><%= item.posts.length %></small></li>
+    <li><a href="<%- config.root %><%- item.path %>" style="width:45px; display:inline-block;"><%= item.name %></a><small><%= item.posts.length %></small></li>
   <% } %>
   <% }); %>
 
-  <% site.categories.sort('path').each(function(item){ %>
-  <% if (item.name == "源码笔记"){ %>
-    <li><a href="<%- config.root %><%- item.path %>" style="width:50px; display:inline-block;"><%= item.name %></a><small><%= item.posts.length %></small></li>
-  <% } %>
-  <% }); %>
-
-  <li id="os_ul"><a href="#" style="width:50px; display:inline-block;">读书笔记</a><small>42</small></li>
+  <li id="os_ul"><a href="#" style="width:45px; display:inline-block;">读书笔记</a><small>43</small></li>
   <ul id="os_li" class="entry_li" style="list-style: none; padding-left: 5px; display: none;">
       <% site.categories.sort('path').each(function(item){ %>
       <% if (item.name == "Java并发编程实战"){ %>
@@ -84,6 +66,21 @@
       <% }); %>
   </ul>
 
+  <li id="xx_ul"><a href="#" style="width:60px; display:inline-block;">框架|中间件</a><small>8</small></li>
+  <ul id="xx_li" class="entry_li" style="list-style: none; padding-left: 5px; display: none;">
+      <% site.categories.sort('path').each(function(item){ %>
+      <% if (item.name == "Tomcat"){ %>
+      <li><a href="<%- config.root %><%- item.path %>" style="width:40px; display:inline-block;"><%= item.name %></a><small><%= item.posts.length %></small></li>
+      <% } %>
+      <% }); %>
+
+      <% site.categories.sort('path').each(function(item){ %>
+      <% if (item.name == "Netty"){ %>
+      <li><a href="<%- config.root %><%- item.path %>" style="width:40px; display:inline-block;"><%= item.name %></a><small><%= item.posts.length %></small></li>
+      <% } %>
+      <% }); %>
+  </ul>
+
   </ul>
 </div>
 <% } %>
@@ -92,5 +89,6 @@
 <script type="text/javascript">
 $(document).ready(function(){
     $("#os_ul").click(function(){ $("#os_li").toggle(); });
+    $("#xx_ul").click(function(){ $("#xx_li").toggle(); });
 });
 </script>
